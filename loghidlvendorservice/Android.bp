@@ -1,0 +1,29 @@
+cc_binary {
+    name: "loghidlvendorservice",
+    srcs: [
+        "loghidlvendorservice_main.cpp",
+        "log_hidl_service.cpp",
+    ],
+    proprietary: true,
+    owner: "mtk",
+    init_rc: ["loghidlvendorservice.rc"],
+    static_libs: [
+        "libpcap",
+    ],
+    shared_libs: [
+        "libsysutils",
+        "libcutils",
+        "libnetutils",
+        "libcrypto",
+        "liblog",
+        "libc++",
+        "libutils",
+        "libdl",
+        "libbase",
+        "libhardware",
+        "libbinder",
+        "libhidlbase",
+        "libutils",
+        "vendor.mediatek.hardware.log@1.0",
+    ],
+}
